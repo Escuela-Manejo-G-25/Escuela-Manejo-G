@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-<header>
-  <div class="logo-slogan">
-    <img src="assets/logo.jpg" alt="Logo Genesis" id="logo">
-    <span class="slogan">Mereces lo que sueñas.</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis Escuela de Manejo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-slogan">
+      <img src="assets/logo.jpg" alt="Logo Genesis" id="logo">
+      <span class="slogan">Mereces lo que sueñas.</span>
+    </div>
+    <button id="menu-toggle" aria-label="Menú">
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+    </button>
+    <nav id="quick-nav">
+      <a href="#inicio" class="btn">Inicio</a>
+      <a href="#cursos" class="btn">Cursos</a>
+      <a href="#sobre" class="btn">Nosotros</a>
+      <a href="#contacto" class="btn">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>GENESIS</h1>
+    <p>Aprende a manejar con confianza.<br>En Genesis te ofrecemos los mejores instructores y métodos de enseñanza.</p>
+  </section>
+
+  <section id="features">
+    <div class="feature"><h3>Instructores Certificados</h3><p>Nuestros instructores tienen años de experiencia y están certificados para brindarte la mejor enseñanza.</p></div>
+    <div class="feature"><h3>Vehiculos</h3><p>Contamos con doble comando para mayor seguridad.</p></div>
+    <div class="feature"><h3>95% de Aprobación</h3><p>Nuestros estudiantes tienen una tasa de aprobación del 95% en el examen de manejo.</p></div>
+  </section>
+
+  <section id="cursos">
+    <h2>Nuestros Cursos</h2>
+    <div class="course"><h4>Curso Básico</h4><ul><li>10 horas prácticas</li><li>Material didáctico</li></ul></div>
+    <div class="course"><h4>Curso Avanzado</h4><ul><li>6 horas prácticas</li><li>Manejo en avenida</li></ul></div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Genesis</h2>
+    <p>Genesis  fue fundada en 2010 con el objetivo de formar conductores responsables y seguros.<br>Desde entonces, hemos graduado a más de 1000 estudiantes que hoy circulan con confianza por las calles de nuestra ciudad.</p>
+  </section>
+
+  <section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item"><strong>¿Qué necesito para inscribirme al curso?</strong><p>Unicamente el nombre y una direccion.</p></div>
+    <div class="faq-item"><strong>¿Cuánto tiempo dura el proceso completo?</strong><p>Entre 4 y 6 semanas, según disponibilidad y ritmo de aprendizaje.</p></div>
+    <div class="faq-item"><strong>¿Puedo elegir el horario de mis clases prácticas?</strong><p>Sí, ofrecemos horarios de lunes a sábado; elige el que más te convenga.</p></div>
+    <div class="faq-item"><strong>¿Que sucede sino puedo presentarme a la clase?</strong><p>Tenes posibilidad de reprogramarla para la semana siguiente.</p></div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Hablá con nosotros por WhatsApp:</p>
+    <p><strong>Ubicación:</strong> </p>
+    <p><strong>Email:</strong> genesis@gmail.com</p>
+    <p><strong>Horario:</strong> Lun-Vie 8:00-18:00, Sáb 9:00-15:00</p>
+  </section>
+
+  <section id="redes">
+    <h2>Síguenos en nuestras redes sociales</h2>
+    <div class="redes-grid">
+      <a href="https://www.facebook.com/" class="social-item"><img src="assets/icons/facebook.svg" alt="Facebook"> Facebook</a>
+      <a href="https://www.instagram.com/auto" class="social-item"><img src="assets/icons/instagram.svg" alt="Instagram"> Instagram</a>
+      <a href="https://tiktok.com/@auto" class="social-item"><img src="assets/icons/tiktok.svg" alt="TikTok"> TikTok</a>
+    </div>
+  </section>
+
+  <div id="whatsapp-float">
+    <a href="https://wa.link/*?text=¡Hola%20Genesis!%20Quiero%20más%20información." target="_blank">
+      <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+      <span id="whatsapp-msg">¿Tenés dudas? ¡Hablános!</span>
+    </a>
   </div>
-  <button id="menu-toggle" aria-label="Menú">
-    <div class="hamburger"></div>
-    <div class="hamburger"></div>
-    <div class="hamburger"></div>
-  </button>
-  <nav id="quick-nav">
-    <a href="#inicio" class="btn">Inicio</a>
-    <a href="#cursos" class="btn">Cursos</a>
-    <a href="#sobre" class="btn">Nosotros</a>
-    <a href="#contacto" class="btn">Contacto</a>
-  </nav>
-</header>
 
-<section id="inicio">
-  <h1>GENESIS</h1>
-  <p>Aprende a manejar con confianza.<br>En Genesis te ofrecemos los mejores instructores y métodos de enseñanza.</p>
-</section>
-
-<section id="features">
-  <div class="feature"><h3>Instructores Certificados</h3><p>Nuestros instructores tienen años de experiencia y están certificados para brindarte la mejor enseñanza.</p></div>
-  <div class="feature"><h3>Vehiculos</h3><p>Contamos con doble comando para mayor seguridad.</p></div>
-  <div class="feature"><h3>95% de Aprobación</h3><p>Nuestros estudiantes tienen una tasa de aprobación del 95% en el examen de manejo.</p></div>
-</section>
-
-<section id="cursos">
-  <h2>Nuestros Cursos</h2>
-  <div class="course"><h4>Curso Básico</h4><ul><li>10 horas prácticas</li><li>Material didáctico</li></ul></div>
-  <div class="course"><h4>Curso Avanzado</h4><ul><li>6 horas prácticas</li><li>Manejo en avenida</li></ul></div>
-</section>
-
-<section id="sobre">
-  <h2>Sobre Genesis</h2>
-  <p>Genesis Escuela de Manejo fue fundada en 2010 con el objetivo de formar conductores responsables y seguros.<br>Desde entonces, hemos graduado a más de 1000 estudiantes que hoy circulan con confianza por las calles de nuestra ciudad.</p>
-</section>
-
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="faq-item"><strong>¿Qué necesito para inscribirme al curso?</strong><p>Unicamente el nombre y una direccion.</p></div>
-  <div class="faq-item"><strong>¿Cuánto tiempo dura el proceso completo?</strong><p>Entre 4 y 6 semanas, según disponibilidad y ritmo de aprendizaje.</p></div>
-  <div class="faq-item"><strong>¿Puedo elegir el horario de mis clases prácticas?</strong><p>Sí, ofrecemos horarios de lunes a sábado; elige el que más te convenga.</p></div>
-  <div class="faq-item"><strong>¿Que sucede sino puedo presentarme a la clase?</strong><p>Tenes posibilidad de reprogramarla para la semana siguiente.</p></div>
-</section>
-
-<section id="contacto">
-  <h2>Contáctanos</h2>
-  <p>Hablá con nosotros por WhatsApp:</p>
-  <p><strong>Ubicación:</strong> Gerli, Lanús</p>
-  <p><strong>Email:</strong> genesis.autoescuela82@gmail.com</p>
-  <p><strong>Horario:</strong> Lun-Vie 8:00-18:00, Sáb 9:00-15:00</p>
-</section>
-
-<section id="redes">
-  <h2>Síguenos en nuestras redes sociales</h2>
-  <div class="redes-grid">
-    <a href="https://www.facebook.com/share/19Xczv72Rs/" class="social-item"><img src="assets/icons/facebook.svg" alt="Facebook"> Facebook</a>
-    <a href="https://www.instagram.com/autoescuela.genesis" class="social-item"><img src="assets/icons/instagram.svg" alt="Instagram"> Instagram</a>
-    <a href="https://tiktok.com/@autoescuelagenesis" class="social-item"><img src="assets/icons/tiktok.svg" alt="TikTok"> TikTok</a>
-  </div>
-</section>
-
-<div id="whatsapp-float">
-  <a href:="https://wa.link/pmwpje?text=¡Hola%20Genesis!%20Quiero%20más%20información." target="_blank">
-    <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
-    <span id="whatsapp-msg">¿Tenés dudas? ¡Hablános!</span>
-  </a>
-</div>
-
-<footer>
-  <p>© 2010 Genesis Escuela de Manejo. Todos los derechos reservados.</p>
-</footer>
-<script src="script.js"></script>
+  <footer>
+    <p>© 2010 Genesis Escuela de Manejo. Todos los derechos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
