@@ -1,19 +1,22 @@
 /* Estilos base */
-body { margin:0; font-family:sans-serif; background:#000; color:#fff; padding-top: 60px; /* Para evitar que el contenido se oculte detrás del header fijo */ }
+body { margin:0; font-family:sans-serif; background:#000; color:#fff; padding-top: 60px; /* Para evitar el solapamiento del header fijo */ font-size: 16px; }
 header { display:flex; align-items:center; justify-content:space-between; padding:0 20px; height:60px; background:#111; position: fixed; top: 0; left: 0; width: 100%; z-index: 100; }
 .logo-slogan { display:flex; align-items:center; gap:10px; }
-#logo { height:40px; }
+#logo { height:40px; margin-right: 10px; }
 .slogan { color:#D4AF37; font-size:1rem; text-align: left; margin-top: 0; }
 #quick-nav { display:flex; align-items:center; position: static; width: auto; padding: 0 20px; background: transparent; }
 #quick-nav .btn { background:#D4AF37; color:#000; padding:6px 10px; margin-left:8px; border-radius:4px; text-decoration:none; font-size:0.9rem; display: inline-block; width: auto; }
 section { padding:20px; text-align: center; }
+section h1 { font-size: 2.5rem; }
+section h2 { font-size: 2rem; }
+section p { font-size: 1rem; }
 #inicio p,
 #features .feature p,
 #cursos .course ul,
 #sobre p {
   text-align: center;
 }
-.feature, .course, .faq-item { background:#D4AF37; color:#000; margin:10px 0; padding:15px; border-radius:6px; }
+.feature, .course, .faq-item { background:#D4AF37; color:#000; margin:10px 0; padding:15px; border-radius:6px; max-width: 80%; margin-left: auto; margin-right: auto; }
 #redes { text-align: center; padding: 20px; }
 .redes-grid { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30px; }
 .social-item { display: flex; flex-direction: column; align-items: center; gap: 8px; color:#D4AF37; text-decoration:none; font-size: 16px; }
@@ -21,80 +24,107 @@ section { padding:20px; text-align: center; }
 #whatsapp-float { position: fixed; bottom: 20px; right: 20px; display: flex; align-items: center; z-index: 1000; }
 #whatsapp-float a { display: flex; align-items: center; text-decoration: none; color: inherit; position: relative; }
 #whatsapp-float img { width: 48px; height: 48px; }
-#whatsapp-msg { display: none; background: #25D366; color: #fff; padding: 5px 8px; border-radius: 4px; position: absolute; right: 60px; bottom: 0; transform: translateY(10px); opacity: 0; animation: fadeIn 0.5s forwards; }
+#whatsapp-msg { display: none; background: #25D366; color: #fff; padding: 5px 8px; border-radius: 4px; position: absolute; right: 60px; bottom: 0; transform: translateY(10px); opacity: 0; animation: fadeIn 0.5s forwards; white-space: nowrap; min-width: max-content; }
 @keyframes fadeIn { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
 footer { text-align: center; padding: 20px; font-size: 0.9rem; }
 #contacto { background: #D4AF37; color: #000; padding: 20px; text-align: center; }
 
 /* Estilos para móvil (ancho máximo 600px) */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10px 20px;
+  body { font-size: 14px; padding-top: 50px; }
+  header { flex-direction: row; justify-content: space-between; align-items: center; padding: 10px 20px; height: auto; position: fixed; }
+  .logo-slogan { flex-direction: row; align-items: center; justify-content: center; margin-bottom: 0; width: auto; }
+  #logo { height: 30px; margin-right: 10px; }
+  .slogan { text-align: left; font-size: 0.8rem; margin-top: 0; }
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
   }
 
-  .logo-slogan {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
+  #menu-toggle.open .hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
 
-  .slogan {
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 5px;
+  #menu-toggle.open .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle.open .hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hamburger {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .hamburger:nth-child(1) {
+    top: 6px;
+  }
+
+  .hamburger:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger:nth-child(3) {
+    bottom: 6px;
   }
 
   #quick-nav {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
-    padding: 10px;
+    padding-top: 60px;
     background: rgba(17, 17, 17, 0.9);
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 0;
     left: 0;
+    height: 100%;
+    z-index: 105;
   }
 
-  #quick-nav .btn {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px 15px;
-    border-radius: 0;
-    text-align: center;
-    font-size: 1rem;
-    margin-left: 0;
-  }
-
-  section {
-    padding: 20px;
-    text-align: center; /* Aseguramos que el centrado se mantenga en móvil */
-  }
-
-  #redes h2 {
-    font-size: 1.3rem;
-  }
-
-  .redes-grid {
+  #quick-nav.open {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  }
+  #quick-nav .btn { display: block; width: 100%; margin: 0; padding: 15px 20px; border-radius: 0; text-align: left; font-size: 1rem; margin-left: 0; border-bottom: 1px solid #333; }
+  #quick-nav .btn:last-child { border-bottom: none; }
+  section { padding-top: 80px; text-align: center; }
+  section h1 { font-size: 2rem; }
+  section h2 { font-size: 1.5rem; }
+  section p { font-size: 0.9rem; }
+  #redes h2 { font-size: 1.3rem; }
+  .redes-grid { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 20px; }
+  .social-item { flex-direction: column; align-items: center; gap: 5px; font-size: 0.9rem; }
+  footer { padding: 10px; font-size: 0.8rem; }
+}
+
+/* Estilos para escritorio (ancho mínimo 601px) */
+@media (min-width: 601px) {
+  #menu-toggle {
+    display: none;
   }
 
-  .social-item {
-    flex-direction: column;
+  #quick-nav {
+    display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
-  }
-
-  footer {
-    padding: 10px;
-    font-size: 0.8rem;
+    position: static;
+    width: auto;
+    padding: 0 20px;
+    background: transparent;
   }
 }
